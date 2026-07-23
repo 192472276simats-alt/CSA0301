@@ -1,5 +1,4 @@
 START
-
 // Step 1: Define Patient Data (Data Object)
 DEFINE Patient
     PatientID
@@ -8,13 +7,11 @@ DEFINE Patient
     MedicalHistory
     Diagnosis
 END DEFINE
-
 // Step 2: Create Data Structure
 CREATE Structure PatientRecord
     Patient details
     Pointer to next record
 END Structure
-
 // Step 3: Define ADT Operations
 ADT PatientList
     InsertPatient()
@@ -23,10 +20,8 @@ ADT PatientList
     UpdatePatient()
     DisplayPatients()
 END ADT
-
 // Step 4: Implementation in C using Structures and Pointers
 INITIALIZE Head = NULL
-
 WHILE user does not choose Exit
     DISPLAY Menu
         1. Insert Patient
@@ -35,9 +30,7 @@ WHILE user does not choose Exit
         4. Update Patient
         5. Display Patients
         6. Exit
-
     READ Choice
-
     IF Choice = 1
         CREATE new PatientRecord
         STORE patient details
@@ -58,5 +51,4 @@ WHILE user does not choose Exit
         EXIT program
     END IF
 END WHILE
-
 STOP
