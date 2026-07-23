@@ -1,37 +1,29 @@
 START
-
 // Algorithm
 INPUT DriverLocations
 INPUT UserLocation
-
 // Input Size
 SET N = Number of Available Drivers
-
 // Search for Nearby Driver
 FOR each Driver from 1 to N
     CALCULATE Distance between Driver and User
-
     IF Distance is Minimum THEN
         Assign Driver as NearestDriver
     END IF
 END FOR
-
 // Time Complexity
 IF N increases THEN
     TimeComplexity = O(N)
 END IF
-
 // Space Complexity
 STORE DriverLocations
 SpaceComplexity = O(N)
-
 // Efficiency
 IF TimeComplexity is Low THEN
     SystemEfficiency = High
 ELSE
     SystemEfficiency = Low
 END IF
-
 // Performance Measurement
 DISPLAY NearestDriver
 DISPLAY TimeComplexity
