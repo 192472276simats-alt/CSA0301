@@ -1,0 +1,48 @@
+START
+
+// Linear Data Structure
+CREATE Array ProductList
+CREATE LinkedList SearchHistory
+
+// Store Products
+FOR each product
+    READ ProductID, ProductName, Price
+    STORE in ProductList
+END FOR
+
+// Sequential Access
+FOR each product in ProductList
+    IF ProductID matches SearchID THEN
+        DISPLAY Product Details
+        EXIT LOOP
+    END IF
+END FOR
+
+// Limitation
+IF Product not found THEN
+    DISPLAY "Sequential search is slow for large data."
+END IF
+
+// Non-Linear Data Structures
+CREATE Tree ProductCategory
+CREATE Graph RecommendationNetwork
+
+// Build Product Category Tree
+ADD Root = "Products"
+ADD Categories (Electronics, Clothing, Grocery)
+ADD Products under each Category
+
+// Build Recommendation Graph
+FOR each related product
+    CONNECT ProductA with ProductB
+END FOR
+
+// Search Product by Category
+INPUT Category
+DISPLAY Products from Tree
+
+// Recommend Products
+INPUT SelectedProduct
+DISPLAY Connected Products from Graph
+
+STOP
