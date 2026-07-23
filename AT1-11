@@ -1,0 +1,39 @@
+START
+// Input
+INPUT N
+CREATE Array A[N]
+FOR i = 0 TO N-1
+    READ A[i]
+END FOR
+INPUT Key
+// Linear Search
+FOR i = 0 TO N-1
+    IF A[i] == Key THEN
+        DISPLAY "Element Found at Position", i
+        EXIT LOOP
+    END IF
+END FOR
+// Binary Search (Array must be sorted)
+SET Low = 0
+SET High = N - 1
+WHILE Low <= High
+    Mid = (Low + High) / 2
+    IF A[Mid] == Key THEN
+        DISPLAY "Element Found at Position", Mid
+        BREAK
+    ELSE IF Key < A[Mid] THEN
+        High = Mid - 1
+    ELSE
+        Low = Mid + 1
+    END IF
+END WHILE
+// Time Complexity
+DISPLAY "Linear Search : O(N)"
+DISPLAY "Binary Search : O(log N)"
+// Efficiency
+IF Array is Sorted THEN
+    DISPLAY "Binary Search is More Efficient"
+ELSE
+    DISPLAY "Linear Search is Suitable"
+END IF
+STOP
