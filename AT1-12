@@ -1,0 +1,32 @@
+START
+// ADT
+DEFINE RideService
+    RequestRide()
+    AllocateDriver()
+    FindRoute()
+    CompleteRide()
+END DEFINE
+// Linear Data Structures
+CREATE Queue UserRequests
+CREATE LinkedList AvailableDrivers
+// Non-Linear Data Structure
+CREATE Graph RoadNetwork
+WHILE User requests a ride
+    // Store user request
+    ENQUEUE User into UserRequests
+    // Allocate nearest driver
+    REMOVE Driver from AvailableDrivers
+    // Find shortest route
+    INPUT Source, Destination
+    APPLY ShortestPath Algorithm on Graph
+    // Complete ride
+    DISPLAY Driver Details
+    DISPLAY Shortest Route
+    DISPLAY Ride Completed
+END WHILE
+// Performance Analysis
+DISPLAY "Queue Operations : O(1)"
+DISPLAY "Linked List Operations : O(1)"
+DISPLAY "Graph Search : O(V + E)"
+DISPLAY "System Efficiency Improved"
+STOP
