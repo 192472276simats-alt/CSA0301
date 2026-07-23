@@ -1,0 +1,38 @@
+START
+// Array
+CREATE Array Playlist[100]
+// Linked List
+CREATE LinkedList PlaylistList
+// Stack
+CREATE Stack RecentlyPlayed
+// Queue
+CREATE Queue PlayQueue
+WHILE User does not Exit
+    DISPLAY
+        1. Insert Song
+        2. Delete Song
+        3. Traverse Playlist
+        4. Play Next Song
+        5. Exit
+    READ Choice
+    IF Choice = 1 THEN
+        READ Song
+        INSERT Song into LinkedList
+        ENQUEUE Song into PlayQueue
+    END IF
+    IF Choice = 2 THEN
+        READ Song
+        DELETE Song from LinkedList
+    END IF
+    IF Choice = 3 THEN
+        TRAVERSE LinkedList
+        DISPLAY All Songs
+    END IF
+    IF Choice = 4 THEN
+        DEQUEUE Song from PlayQueue
+        PLAY Song
+        PUSH Song into RecentlyPlayed
+    END IF
+END WHILE
+
+STOP
