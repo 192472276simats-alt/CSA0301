@@ -1,0 +1,44 @@
+START
+// ADT
+DEFINE TicketBooking
+    BookSeat()
+    CancelSeat()
+    AllocateSeat()
+    DisplaySeats()
+END DEFINE
+// Data Structure
+CREATE Array Seats[100]
+CREATE LinkedList WaitingList
+WHILE User does not Exit
+    DISPLAY
+        1. Book Seat
+        2. Cancel Seat
+        3. Display Seats
+        4. Exit
+    READ Choice
+    IF Choice = 1 THEN
+        READ SeatNumber
+        IF Seats[SeatNumber] is Empty THEN
+            BOOK Seat
+            DISPLAY "Seat Booked"
+        ELSE
+            ADD User to WaitingList
+            DISPLAY "Added to Waiting List"
+        END IF
+    END IF
+    IF Choice = 2 THEN
+        READ SeatNumber
+        CANCEL Seat
+        IF WaitingList is not Empty THEN
+            ALLOCATE Seat to First User in WaitingList
+        END IF
+    END IF
+    IF Choice = 3 THEN
+        DISPLAY All Seat Status
+    END IF
+END WHILE
+// Performance
+DISPLAY "Array: Fast Access (O(1))"
+DISPLAY "Linked List: Efficient Insert/Delete"
+
+STOP
