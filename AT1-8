@@ -1,0 +1,27 @@
+START
+// Input
+INPUT N
+// Recursive Function
+FUNCTION FactorialRecursive(N)
+    IF N == 0 OR N == 1 THEN
+        RETURN 1
+    ELSE
+        RETURN N * FactorialRecursive(N - 1)
+    END IF
+END FUNCTION
+// Iterative Method
+Factorial = 1
+FOR i = 1 TO N
+    Factorial = Factorial * i
+END FOR
+// Memory Usage
+DISPLAY "Recursion uses Call Stack memory."
+DISPLAY "Iteration uses Loop Control with constant memory."
+// Efficiency Comparison
+IF Memory is Limited THEN
+    DISPLAY "Iteration is More Efficient"
+ELSE
+    DISPLAY "Recursion is Suitable for Hierarchical Problems"
+END IF
+
+STOP
