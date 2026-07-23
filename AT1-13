@@ -1,0 +1,27 @@
+START
+// Data
+INPUT NumberOfBooks
+// Data Structure
+CREATE Array BookRecords
+FOR i = 1 TO NumberOfBooks
+    READ BookID
+    READ Title
+    READ Author
+    READ AvailabilityStatus
+    STORE Book details in BookRecords
+END FOR
+// Organization
+SORT BookRecords by BookID or Title
+// Access Method
+INPUT SearchBookID
+FOR each Book in BookRecords
+    IF BookID == SearchBookID THEN
+        DISPLAY Book Details
+        DISPLAY AvailabilityStatus
+        EXIT LOOP
+    END IF
+END FOR
+// Efficiency
+DISPLAY "Records Organized Successfully"
+DISPLAY "Search Completed"
+STOP
