@@ -1,45 +1,37 @@
 START
-
 // Primitive Data
 DECLARE VehicleID AS Integer
 DECLARE Speed AS Float
 DECLARE SignalStatus AS Character
-
 // Non-Primitive Data Structures
 CREATE Array SignalTiming[10]
 CREATE LinkedList VehicleQueue
 CREATE Queue TrafficQueue
 CREATE Tree RoadHierarchy
 CREATE Graph RoadNetwork
-
 // Store signal timings in Array
 FOR each traffic signal
     READ SignalTime
     STORE SignalTime in Array
 END FOR
-
 // Add vehicles to Linked List and Queue
 WHILE vehicles arrive
     READ VehicleID
     INSERT VehicleID into LinkedList
     ENQUEUE VehicleID into TrafficQueue
 END WHILE
-
 // Create Road Hierarchy using Tree
 ADD City as Root
 ADD Zones under City
 ADD Roads under Zones
-
 // Create Road Network using Graph
 FOR each road
     ADD Intersection as Vertex
     CONNECT Roads using Edges
 END FOR
-
 // Find shortest route
 INPUT Source, Destination
 CALCULATE ShortestPath using Graph
-
 // Display Results
 DISPLAY Signal Timings
 DISPLAY Vehicle Queue
