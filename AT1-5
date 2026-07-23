@@ -1,0 +1,34 @@
+START
+// Input Size
+INPUT N
+// Allocate Memory
+CREATE Array Data[N]
+// Memory Usage
+MemoryUsed = SizeOf(Data)
+// Auxiliary Space
+CREATE TemporaryVariable
+AuxiliarySpace = SizeOf(TemporaryVariable)
+// Process Data
+FOR i = 1 TO N
+    READ Data[i]
+END FOR
+FOR i = 1 TO N
+    PROCESS Data[i]
+END FOR
+// Space Complexity
+IF AuxiliarySpace is Constant THEN
+    SpaceComplexity = O(1)
+ELSE
+    SpaceComplexity = O(N)
+END IF
+// Algorithm Efficiency
+IF SpaceComplexity is Low THEN
+    DISPLAY "Algorithm is Memory Efficient"
+ELSE
+    DISPLAY "Algorithm uses More Memory"
+END IF
+DISPLAY MemoryUsed
+DISPLAY AuxiliarySpace
+DISPLAY SpaceComplexity
+
+STOP
