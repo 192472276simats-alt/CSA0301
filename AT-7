@@ -1,0 +1,24 @@
+START
+// Recursive Function to Traverse Folders
+FUNCTION Traverse(Folder)
+    // Base Case
+    IF Folder is Empty THEN
+        RETURN
+    END IF
+    // Recursive Case
+    FOR each Item in Folder
+
+        IF Item is a File THEN
+            DISPLAY Item
+        ELSE IF Item is a Folder THEN
+            CALL Traverse(Item)
+        END IF
+    END FOR
+END FUNCTION
+// Main Program
+INPUT RootFolder
+CALL Traverse(RootFolder)
+// Call Stack and Memory Usage
+DISPLAY "Each recursive call is stored in the Call Stack."
+DISPLAY "Memory usage increases with recursion depth."
+STOP
