@@ -1,0 +1,62 @@
+START
+
+// Step 1: Define Patient Data (Data Object)
+DEFINE Patient
+    PatientID
+    Name
+    Temperature
+    MedicalHistory
+    Diagnosis
+END DEFINE
+
+// Step 2: Create Data Structure
+CREATE Structure PatientRecord
+    Patient details
+    Pointer to next record
+END Structure
+
+// Step 3: Define ADT Operations
+ADT PatientList
+    InsertPatient()
+    DeletePatient()
+    SearchPatient()
+    UpdatePatient()
+    DisplayPatients()
+END ADT
+
+// Step 4: Implementation in C using Structures and Pointers
+INITIALIZE Head = NULL
+
+WHILE user does not choose Exit
+    DISPLAY Menu
+        1. Insert Patient
+        2. Delete Patient
+        3. Search Patient
+        4. Update Patient
+        5. Display Patients
+        6. Exit
+
+    READ Choice
+
+    IF Choice = 1
+        CREATE new PatientRecord
+        STORE patient details
+        LINK record using pointer
+    ELSE IF Choice = 2
+        FIND patient by ID
+        REMOVE record
+    ELSE IF Choice = 3
+        FIND patient by ID
+        DISPLAY patient details
+    ELSE IF Choice = 4
+        FIND patient by ID
+        MODIFY patient details
+    ELSE IF Choice = 5
+        TRAVERSE all records
+        DISPLAY all patient details
+    ELSE IF Choice = 6
+        EXIT program
+    END IF
+END WHILE
+
+STOP
