@@ -1,0 +1,30 @@
+START
+// Tree Structure
+CREATE Tree UserHierarchy
+// Graph Structure
+CREATE Graph SocialNetwork
+// Add Users
+INPUT NumberOfUsers
+FOR i = 1 TO NumberOfUsers
+    ADD User to Graph
+END FOR
+// Create Friend Connections
+INPUT NumberOfConnections
+FOR each Connection
+    READ User1, User2
+    CONNECT User1 and User2 in Graph
+END FOR
+// Tree Hierarchy
+ADD Root User
+ADD Child Users under Parent User
+// Graph Traversal using DFS
+CALL DFS(StartUser)
+// Graph Traversal using BFS
+CALL BFS(StartUser)
+// Display Results
+DISPLAY User Hierarchy
+DISPLAY Friend Connections
+DISPLAY DFS Traversal
+DISPLAY BFS Traversal
+
+STOP
