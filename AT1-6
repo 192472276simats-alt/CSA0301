@@ -1,0 +1,45 @@
+START
+// Step 1: Define ADT (Bank Account)
+ADT BankAccount
+    OPERATIONS:
+        Deposit(amount)
+        Withdraw(amount)
+        CheckBalance()
+        DisplayTransactions()
+END ADT
+// Step 2: Interface
+INPUT Choice
+WHILE Choice != Exit
+    DISPLAY
+        1. Deposit
+        2. Withdraw
+        3. Check Balance
+        4. Display Transactions
+        5. Exit
+    READ Choice
+    // Step 3: Implementation
+    IF Choice = 1 THEN
+        READ Amount
+        Balance = Balance + Amount
+        STORE Transaction
+    END IF
+    IF Choice = 2 THEN
+        READ Amount
+        IF Balance >= Amount THEN
+            Balance = Balance - Amount
+            STORE Transaction
+        ELSE
+            DISPLAY "Insufficient Balance"
+        END IF
+    END IF
+    IF Choice = 3 THEN
+        DISPLAY Balance
+    END IF
+    IF Choice = 4 THEN
+        DISPLAY All Transactions
+    END IF
+END WHILE
+// Step 4: Data Structures
+USE Structure BankAccount
+USE Array or Linked List for Transaction History
+STOP
