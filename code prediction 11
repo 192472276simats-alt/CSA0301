@@ -1,0 +1,40 @@
+D. Abstract Data Types (ADT)
+11. Predict the Output – Stack ADT Concept
+#include &lt;stdio.h&gt;
+#define SIZE 5
+int stack[SIZE];
+int top = -1;
+void push(int x) {
+stack[++top] = x;
+}
+int pop() {
+return stack[top--];
+}
+int main() {
+push(10);
+push(20);
+push(30);
+printf(&quot;%d &quot;, pop());
+printf(&quot;%d &quot;, pop());
+return 0;
+}
+Question: Predict the output and identify the ADT operation being performed.
+Stack ADT
+Operations:
+push(10);
+push(20);
+push(30);
+Stack becomes:
+30  ← top
+20
+10
+Stack follows LIFO — Last In, First Out.
+First:
+pop()
+removes 30.
+Second:
+pop()
+removes 20.
+Output:
+30 20
+ADT operation: pop() — removes and returns the top element.
