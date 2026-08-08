@@ -1,0 +1,22 @@
+Predict the Output – Variables and Data
+1.#include &lt;stdio.h&gt;
+int main() {
+int a = 10, b = 20;
+int c = a + b;
+a = c - a;
+b = c - b;
+printf(&quot;%d %d %d&quot;, a, b, c);
+return 0;
+}
+Question: Predict the output.
+A. Variables and Data
+Variables and Data
+Initial values:
+a = 10
+b = 20
+c = a + b = 30
+Then:
+a = c - a = 30 - 10 = 20
+b = c - b = 30 - 20 = 10
+So the output is:
+20 10 30
