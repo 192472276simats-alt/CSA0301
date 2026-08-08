@@ -1,0 +1,52 @@
+15. Predict the Output – Reverse Recursion
+#include &lt;stdio.h&gt;
+void fun(int n) {
+if(n == 0)
+return;
+fun(n - 1);
+printf(&quot;%d &quot;, n);
+}
+int main() {
+fun(5);
+return 0;
+}
+Question: Predict the output. How is this different from Question 14?
+Reverse Recursion
+Here the important difference is the position of printf():
+fun(n - 1);
+printf("%d ", n);
+Calling:
+fun(5);
+First, recursion goes all the way down:
+fun(5)
+ ↓
+fun(4)
+ ↓
+fun(3)
+ ↓
+fun(2)
+ ↓
+fun(1)
+ ↓
+fun(0)
+Then printing happens while returning:
+1
+2
+3
+4
+5
+Output:
+1 2 3 4 5
+Difference between Q14 and Q15
+
+                
+Q14
+Q15
+printf() before recursive call
+printf() after recursive call
+Prints during going down
+Prints during returning
+Output: 5 4 3 2 1
+Output: 1 2 3 4 5
+
+
