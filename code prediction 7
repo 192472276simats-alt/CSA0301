@@ -1,0 +1,33 @@
+7. Predict the Output – Reverse Array
+#include &lt;stdio.h&gt;
+int main() {
+int a[] = {1, 2, 3, 4, 5};
+for(int i = 0; i &lt; 5/2; i++) {
+int temp = a[i];
+a[i] = a[4-i];
+a[4-i] = temp;
+}
+for(int i = 0; i &lt; 5; i++)
+printf(&quot;%d &quot;, a[i]);
+return 0;
+}
+Question: Predict the output.
+Reverse Array
+Initial:
+1 2 3 4 5
+Loop condition:
+i < 5/2
+Since 5/2 = 2 in integer division:
+i = 0, 1
+i = 0
+Swap:
+a[0] ↔ a[4]
+Array becomes:
+5 2 3 4 1
+i = 1
+Swap:
+a[1] ↔ a[3]
+Array becomes:
+5 4 3 2 1
+Output:
+5 4 3 2 1
