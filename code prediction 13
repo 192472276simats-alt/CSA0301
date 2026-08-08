@@ -1,0 +1,30 @@
+13. Predict the Output – ADT Using Structure
+#include &lt;stdio.h&gt;
+struct Stack {
+int data[3];
+int top;
+};
+int main() {
+struct Stack s = {{10, 20, 30}, 2};
+printf(&quot;%d&quot;, s.data[s.top]);
+return 0;
+}
+Question: Predict the output and identify the current top element.
+
+13. ADT Using Structure
+Structure:
+data = {10, 20, 30}
+top = 2
+Array indexes:
+Index:  0   1   2
+Data:  10  20  30
+The statement:
+s.data[s.top]
+becomes:
+s.data[2]
+Therefore:
+30
+Output:
+30
+Current top element: 30
+E. Recursion
