@@ -1,0 +1,21 @@
+B. Primitive and Non-Primitive Data Structures
+4. Predict the Output – Array
+#include &lt;stdio.h&gt;
+int main() {
+int a[5] = {10, 20, 30, 40, 50};
+printf(&quot;%d %d %d&quot;,
+a[0], a[2], a[4]);
+return 0;
+}
+Question: Predict the output.
+ Array
+Array:
+Index:  0   1   2   3   4
+Value: 10  20  30  40  50
+Therefore:
+a[0] = 10
+a[2] = 30
+a[4] = 50
+Output:
+10 30 50
+
