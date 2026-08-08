@@ -1,0 +1,21 @@
+2. Predict the Output – Data Object
+#include &lt;stdio.h&gt;
+int main() {
+int x = 5;
+int y = x;
+x = 10;
+printf(&quot;%d %d&quot;, x, y);
+return 0;
+}
+Question: Predict the output and explain why changing x does not change y.
+
+Data Object
+Initially:
+x = 5
+y = x → y = 5
+Then:
+x = 10
+y remains 5 because when y = x is executed, the value 5 is copied into y. Both are separate integer variables.
+Output:
+10 5
+Why? x and y are separate data objects. Changing x later does not change y.
